@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Marvel App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/md5.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
+</head>
+
+<body ng-app="searchApp" ng-controller="SearchController">
+
+    <header>
+        <div class="jumbotron">
+            <a href="http://marvel.com/" target="_blank"><img class="fluid-img" src="img/marvel-logo.png" alt="marvel-logo"></a>
+            <div class="form-group row">
+                <div class="col-lg-6 offset-lg-3">
+                    <input class="form-control" type="text" ng-model="searchString" placeholder="Search for your favorite Marvel character" id="example-search-input">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="marvel-characters">
+        <div class="container">
+            <div class="row" id="characters">
+                <div ng-repeat="character in characters | searchFor:searchString" class="col-lg-3 col-sm-6 col-xs-12" id="item">
+                    <img class="img-fluid" ng-src="{{character.thumbnail.path}}/standard_fantastic.jpg">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p class="marvel">{{character.name}}</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="unbookmarked" src="img/unbookmarked.svg" onclick="bookmark()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <a href="https://developer.marvel.com">Data provided by Marvel. © 2014 Marvel</a>
+        </div>
+    </footer>
+
+
+    <script src="js/config.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

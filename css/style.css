@@ -1,0 +1,67 @@
+header .jumbotron {
+    text-align: center;
+}
+
+header .jumbotron img {
+    margin: 15px auto;
+}
+
+section.marvel-characters #item {
+    margin-bottom: 15px;
+    float: right;
+}
+
+section.marvel-characters p.marvel {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+section.marvel-characters img.unbookmarked {
+    margin-top: 5px;
+}
+
+footer.footer {
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    margin-top: 30px;
+    background-color: #e9ecef;
+    text-align: center;
+}
+
+footer.footer a {
+    color: #ea2328;
+}
+
+footer.footer a:hover {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+
+@media (max-width: 1200px) {}
+
+/* Large devices (desktops, 992px and up) */
+
+@media (max-width: 992px) {
+    section.marvel-characters #item {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    section.marvel-characters img.unbookmarked {
+        margin-top: -20px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (max-width: 768px) {}
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media (max-width: 576px) {
+    section.marvel-characters img.unbookmarked {
+        margin-top: -25px;
+    }
+}
